@@ -1,0 +1,28 @@
+.video-responsive {
+  overflow: hidden;
+  position: relative;
+  margin-top: 2rem;
+  padding-bottom: 56.8%;
+  height: 0;
+}
+
+.wrap {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  transform: translateX(-50%);
+  z-index: 9;
+  cursor: pointer;
+}
+
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
