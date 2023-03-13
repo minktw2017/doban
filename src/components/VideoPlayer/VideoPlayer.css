@@ -13,16 +13,16 @@
   width: 50%;
   height: 50%;
   transform: translateX(-50%);
-  z-index: 9;
+  z-index: 2;
   cursor: pointer;
 }
 
 .video-responsive iframe {
+  overflow: hidden;
   position: absolute;
   top: 0;
   left: 50%;
   width: 50%;
   height: 50%;
   transform: translateX(-50%);
-  z-index: -1;
 }
