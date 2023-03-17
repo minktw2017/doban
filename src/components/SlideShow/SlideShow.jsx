@@ -37,7 +37,6 @@ const SlideShow = () => {
         <img src={data[1].path} alt='slider' />
         <img src={data[2].path} alt='slider' />
       </div>
-      {/* <img src={data[currentImg].path} alt={`Slide ${currentImg}`} /> */}
       <div className="featured">
         <div className="no">{data[currentImg].no}</div>
         <p className="title">{data[currentImg].title}</p>

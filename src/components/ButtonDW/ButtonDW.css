@@ -1,0 +1,12 @@
+.btnDownload {
+  margin:0 0.5rem;
+  width: 120px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #EFEFEF;
+  background: #C29591;
+}

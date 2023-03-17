@@ -6,18 +6,7 @@
   height: 0;
 }
 
-.wrap {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 50%;
-  height: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  cursor: pointer;
-}
-
-.video-responsive iframe {
+.wrap, .video-responsive video {
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -25,4 +14,31 @@
   width: 50%;
   height: 50%;
   transform: translateX(-50%);
+}
+
+.wrap {
+  z-index: 2;
+  cursor: pointer;
+  background-color: black;
+}
+
+.btnDownload {
+  margin:0 0.5rem;
+  width: 120px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #EFEFEF;
+  background: #C29591;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 375px) {
+  .wrap, .video-responsive video {
+    width: 80%;
+    height: 80%;
+  }
 }

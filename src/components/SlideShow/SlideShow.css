@@ -25,13 +25,14 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  min-height: 6rem;
   transform: translate(-50%, -50%);
   z-index: 1;
   /* transition: fade-in 0.5s ease-in-out; */
 }
 
 @keyframes moveNo {
-  0%  { bottom: 0; box-shadow: 0 0 5px rgba(0,0,0,0.5);}
+  0%  { bottom: 0; box-shadow: 0 0 5px rgba(0,0,0,0.5); color: #000}
   100% { bottom: 50px; box-shadow: 0 50px 50px rgba(0,0,0,0.1);}
 }
 
