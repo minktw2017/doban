@@ -6,7 +6,7 @@ function LikeButton({ itemId }) {
 
   useEffect(() => {
     async function fetchLikes() {
-      const response = await axios.get(`https://delightroom.ga/reckon`);
+      const response = await axios.get(`/api/reckon/`);
       setCount(response.data.count);
     }
 
@@ -14,7 +14,7 @@ function LikeButton({ itemId }) {
   }, [itemId]);
 
   async function handleLike() {
-    const response = await axios.get(`https://delightroom.ga/countplus/`);
+    const response = await axios.post(`/api/countplus/Duban_counter`);
     setCount(response.data.count);
   }
 

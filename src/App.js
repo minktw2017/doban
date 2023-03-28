@@ -2,9 +2,10 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import ReactGA from "react-ga";
 import Home from "../src/pages/Home/Home.jsx";
 import Dialog from "./pages/Dialog/Dialog.jsx";
-import './App.css';
+import "./App.css";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,8 @@ const router = createBrowserRouter([
     element: <Dialog />,
   },
 ]);
+
+ReactGA.initialize("G-5JHDGVXCTG");
 
 function App() {
   return (

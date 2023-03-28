@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 // import SlideShow from "../../components/SlideShow/SlideShow";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
-import LikeButtom from "../../components/LikeButton/LikeButton"
+import LikeButtom from "../../components/LikeButton/LikeButton";
 import "./Home.css";
 
 const Home = () => {
@@ -13,7 +13,6 @@ const Home = () => {
       {/* <SlideShow /> */}
       <LikeButtom itemId="dwCounter" />
       <VideoPlayer />
-
     </div>
   );
 };
