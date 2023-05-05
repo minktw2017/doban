@@ -1,27 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function LikeButton({ itemId }) {
-  const [count, setCount] = useState(0);
+function LikeButton() {
+
+  const [guest, setGuest] = useState(0);
 
   useEffect(() => {
-    async function fetchLikes() {
-      const response = await axios.get(`/api/reckon/`);
-      setCount(response.data.count);
-    }
+    async function fetchGuests() {
+      const response2 = await axios.get("/api/guest/add");
+      setGuest(response2.data);
+    };
 
-    fetchLikes();
-  }, [itemId]);
-
-  async function handleLike() {
-    const response = await axios.post(`/api/countplus/Duban_counter`);
-    setCount(response.data.count);
-  }
+    fetchGuests();
+  }, []);
 
   return (
-    <button onClick={handleLike}>
-      {count} likes
-    </button>
+    <>
+      <p>此網站已被瀏覽{guest}次。</p>
+    </>
   );
 }
 

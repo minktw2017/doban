@@ -4,7 +4,6 @@ nav {
   align-items: center;
   justify-content: center;
   height: 56px;
-  overflow: hidden;
 }
 
 nav .logo {
@@ -58,7 +57,7 @@ nav .logo {
   width: fit-content;
   background-color: white;
   padding: 20px;
-  z-index: 9;
+  z-index: 12;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 

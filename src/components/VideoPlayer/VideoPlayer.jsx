@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import "./VideoPlayer.css";
 
-const VideoPlayer = () => {
+const VideoPlayer = ({ path }) => {
 
   const [isMobile, setIsMobile] = useState(false);
   const [isAndroid, setIsAndroid] = useState(false);
@@ -124,7 +124,7 @@ const VideoPlayer = () => {
       </Dialog>
       )}
       <video controls>
-        <source src="/video/sample-mp4-file-small.mp4" type="video/mp4" />
+        <source src={path} type="video/mp4" />
       </video>
     </div>
   );

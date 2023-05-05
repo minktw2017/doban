@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReactGA from "react-ga";
 import Home from "../src/pages/Home/Home.jsx";
+import Video from "../src/pages/Video/Video.jsx";
 // import Dialog from "./pages/Dialog/Dialog.jsx";
 import HomePage from "./scenes/HomePage/HomePage.jsx";
 import LoginPage from "./scenes/LoginPage/LoginPage.jsx";
@@ -26,6 +27,7 @@ function App() {
         <CssBaseline />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/video/:id" element={<Video />} />
           <Route path="/social" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/profile/:userId" element={<ProfilePage />} />
