@@ -111,7 +111,7 @@ const AdminMovie = ({ outsideNew = false }) => {
 			console.log("first");
 
 			await axios
-				.put(`/data/movie/${data.sn}`, formData)
+				.put(`/data/movie/movie/${data.sn}`, formData)
 				.then((res) => alert("影片已上傳。"))
 				.catch((err) => console.log(err));
 		}
