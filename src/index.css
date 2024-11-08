@@ -1,0 +1,296 @@
+@import "tailwindcss/base";
+@import "tailwindcss/utilities";
+@import "tailwindcss/components";
+
+@layer utilities {
+	/* Chrome, Safari and Opera */
+	.scrollbar-hidden::-webkit-scrollbar {
+		display: none;
+	}
+
+	.scrollbar-hidden {
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE and Edge */
+	}
+}
+
+:root {
+	--primary-color: #155e75;
+	--secondary-color: #000;
+}
+
+.custom {
+	color: #eef7ff;
+}
+
+.custom:hover {
+	color: #4d869c;
+}
+
+.hibiscus {
+	@apply bg-gradient-to-b from-[#522258] to-[#8C3061];
+}
+
+.silver {
+	@apply bg-gradient-to-b from-gray-100 to-slate-50;
+}
+
+.pinksky {
+	@apply bg-gradient-to-br from-fuchsia-100 to-sky-200;
+}
+
+.navbgGradient {
+	@apply bg-gradient-to-r 
+  from-fuchsia-800 
+  from-10% 
+  via-purple-800 
+  via-30% 
+  to-violet-700
+  to-90%
+  bg-opacity-75;
+}
+
+.navbg {
+	background: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+}
+
+.warning {
+	padding: 1rem 1.25rem 1rem 1.25rem;
+	text-align: center;
+	font-size: 1.25rem;
+	border-radius: 0.5rem;
+}
+
+.myButton {
+	@apply select-none 
+         rounded-lg 
+         bg-indigo-500 
+         py-3 
+         px-6 
+         text-center 
+         align-middle 
+         font-sans 
+         text-xs 
+         font-bold 
+         uppercase 
+         text-white 
+         shadow-md 
+         shadow-indigo-500/20 
+         transition-all 
+         hover:shadow-lg 
+         hover:shadow-indigo-500/40 
+         focus:opacity-[0.85] 
+         focus:shadow-none 
+         active:opacity-[0.85] 
+         active:shadow-none 
+         disabled:pointer-events-none 
+         disabled:opacity-50 
+         disabled:shadow-none;
+}
+
+.formLabel {
+	@apply block mb-2 text-sm font-medium text-gray-900 dark:text-white;
+}
+
+.formInput {
+	@apply mb-2 
+    bg-gray-50 border 
+    border-gray-300 
+    text-gray-900 
+    text-sm 
+    rounded-lg 
+    focus:ring-blue-300 
+    focus:border-blue-300 
+    block 
+    w-full 
+    p-2.5
+    dark:bg-gray-700 
+    dark:border-gray-600 
+    dark:placeholder-gray-400 
+    dark:text-white 
+    dark:focus:ring-blue-300 
+    dark:focus:border-blue-300;
+}
+
+.outerContainer {
+	@apply w-full
+  mx-auto
+  mb-4
+  lg:max-w-[1200px];
+}
+
+.wrap {
+	@apply max-w-full
+  mx-2
+  rounded-lg
+  overflow-x-hidden
+  flex
+  flex-row
+  justify-start
+  items-center
+  gap-1
+  relative;
+}
+
+.serviceCard {
+	@apply rounded-lg
+  overflow-x-hidden;
+}
+
+.serviceCardContent {
+	@apply w-full
+  h-1/4
+  md:h-1/3
+  absolute
+  top-3/4
+  md:top-2/3
+  left-0
+  text-neutral-100
+  bg-slate-500
+  bg-opacity-70
+  p-2
+  content-center;
+}
+
+.featureCardContent {
+	@apply w-full
+  lg:text-base
+  md:text-sm
+  min-h-[120px]
+  text-base
+  text-neutral-100
+  bg-slate-500
+  bg-opacity-70
+  p-2;
+}
+
+.menuItem {
+	@apply w-full
+  h-[32px]
+  px-4
+  text-xl
+  tracking-widest
+  border-solid 
+  border-0 
+  border-b 
+  border-neutral-100;
+}
+
+.runDownCard {
+	@apply w-full md:w-1/5
+  flex flex-col
+  justify-start
+  items-center;
+}
+
+.runDownCardContentUp {
+	@apply w-full h-[120px]
+  text-neutral-100
+  flex flex-col
+  justify-center
+  items-center
+  md:text-sm;
+}
+
+.runDownCardContentDown {
+	@apply w-full h-[150px]
+  text-neutral-100
+  flex flex-col
+  justify-start
+  items-center
+  md:text-sm;
+}
+
+.runDownCardContentUp h1,
+.runDownCardContentDown h1 {
+	@apply text-xl font-semibold;
+}
+
+.runDownOuterCircle {
+	@apply w-[180px]
+  h-[180px]
+  md:h-[100px]
+  md:w-[100px]
+  my-4
+  rounded-full
+  bg-slate-600
+  flex
+  flex-row
+  justify-center
+  items-center;
+}
+
+.runDownCircle {
+	@apply w-[150px] 
+  h-[150px]
+  md:h-[90px]
+  md:w-[90px]
+  my-4
+  rounded-full 
+  bg-slate-900 
+  text-neutral-100 
+  flex 
+  flex-row
+  justify-center 
+  items-center
+  font-extrabold
+  text-[60px]
+  md:text-[48px];
+}
+
+.aniFadeIn {
+	animation-name: aniFadeIn;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+
+.bgGradient {
+	background: radial-gradient(
+		circle at 52.1% -29.6%,
+		rgb(61, 24, 78) 0%,
+		rgb(122, 55, 118) 100.2%
+	);
+	/* backdrop-filter: blur(5px); */
+}
+
+.bgSquare {
+	height: 350px;
+	width: 350px;
+	background: rgba(144, 19, 254, 0.1);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(2px);
+	-webkit-backdrop-filter: blur(2px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.bgSquareUp {
+	animation-name: bgSquareUp;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes bgSquareUp {
+	from {
+		top: calc(100vh - 350px);
+	}
+
+	to {
+		top: -350px;
+	}
+}
+
+@keyframes aniFadeIn {
+	from {
+		color: #000;
+		opacity: 0;
+	}
+
+	to {
+		color: #eef7ff;
+		opacity: 1;
+	}
+}

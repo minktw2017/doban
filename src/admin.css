@@ -1,0 +1,289 @@
+@import "tailwindcss/base";
+@import "tailwindcss/utilities";
+@import "tailwindcss/components";
+
+body {
+	width: 100%;
+	height: 100vh;
+	max-height: 100vh !important;
+	overflow: auto !important;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 1200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	gap: 2rem;
+	color: rgba(255, 255, 255, 1);
+}
+
+.flexCenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.fakeNav {
+	width: 100%;
+	height: 60px;
+	color: rgba(255, 255, 255, 1);
+	background-color: rgba(128, 128, 128, 1);
+	box-shadow: 0 8px 16px 0 rgba(225, 225, 225, 0.37);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.fakeBg {
+	background: rgba(255, 255, 255, 0.3);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+}
+
+.fakeFlowContainer {
+	width: 300px;
+	padding: 1.5rem 1rem;
+	border-radius: 8px;
+}
+
+.fakeContainer {
+	width: 100%;
+	padding: 1.5rem 1rem;
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.fakeTable {
+	width: 100%;
+	margin-bottom: 1rem;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid rgba(229, 229, 229, 0.9);
+	border-radius: 0.5rem;
+}
+
+.fakeTableHead,
+.fakeTableRow {
+	width: 100%;
+	display: flex;
+	border-bottom: 1px solid rgba(229, 229, 229, 0.9);
+}
+
+.fakeTable .fakeTableRow:last-child {
+	border-bottom: none;
+}
+
+.fakeTableHead div {
+	padding: 0.5rem 1rem;
+	color: rgba(299, 299, 299, 1);
+	border-right: 1px solid rgba(229, 229, 229, 0.9);
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+
+.fakeTableCell {
+	flex: 1 1 0%;
+	padding: 0.5rem 1rem;
+	color: rgba(299, 299, 299, 1);
+	border-right: 1px solid rgba(229, 229, 229, 0.9);
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+
+.fakeTableHead > div:last-child,
+.fakeTableRow > div:last-child,
+.noBorder {
+	border-right: none;
+}
+
+.fakeTableHead div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+.fakeTableBtnGroup {
+	flex-basis: 224px;
+	padding: 0.5rem 1rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.fakeModify {
+	padding: 4px 1rem;
+	background: rgba(239, 71, 111, 1);
+	opacity: 0.8;
+	box-shadow: 0 8px 16px 0 rgba(239, 71, 111, 0.37);
+	border: 1px solid rgba(239, 71, 111, 0.9);
+	border-radius: 0.5rem;
+}
+
+.fakeDelete {
+	background: rgba(6, 214, 160, 1);
+	opacity: 0.8;
+	padding: 4px 1rem;
+	box-shadow: 0 8px 16px 0 rgba(6, 214, 160, 0.37);
+	border: 1px solid rgba(6, 214, 160, 0.9);
+	border-radius: 0.5rem;
+}
+
+.fakeSubmit {
+	background: rgba(17, 138, 178, 1);
+	opacity: 0.8;
+	padding: 4px 1rem;
+	color: rgba(299, 299, 299, 1);
+	box-shadow: 0 8px 16px 0 rgba(17, 138, 178, 0.37);
+	border: 1px solid rgba(17, 138, 178, 0.9);
+	border-radius: 0.5rem;
+}
+
+.fakeModify:hover,
+.fakeDelete:hover,
+.fakeSubmit:hover,
+.btnBox:hover {
+	opacity: 1;
+}
+
+.fakeInputGroup {
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	border: 1px solid rgba(229, 229, 229, 0.9);
+	border-radius: 8px;
+}
+
+.fakeInputGroup {
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid rgba(229, 229, 229, 0.9);
+	border-radius: 8px;
+}
+
+.fakeInput {
+	flex: 1 1 0%;
+	padding: 0.25rem 1rem;
+	border-radius: 1rem;
+	color: rgba(17, 138, 178, 1);
+}
+
+.confirmDialog {
+	position: fixed;
+	min-height: 30vh;
+	min-width: 50vw;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 20;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 8px 16px 0 rgba(225, 225, 225, 0.37);
+	border-radius: 0.5rem;
+}
+
+.confirmDialogTitle {
+	width: 100%;
+	color: rgba(255, 255, 255, 1);
+	text-align: center;
+	background-color: rgba(128, 128, 128, 1);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 8px 16px 0 rgba(225, 225, 225, 0.37);
+}
+
+.confirmDialogContent {
+	width: 100%;
+	padding: 0.5rem 1rem;
+	color: rgba(255, 255, 255, 1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.confirmBtnGroup {
+	width: 100%;
+	padding: 1rem 1rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.btnBox {
+	opacity: 0.8;
+	padding: 4px 1rem;
+}
+
+.primaryBox {
+	background: rgba(239, 71, 111, 1);
+	box-shadow: 0 8px 16px 0 rgba(239, 71, 111, 0.5);
+	border: 1px solid rgba(239, 71, 111, 0.9);
+	border-radius: 0.5rem;
+}
+
+.secondaryBox {
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 0 8px 16px 0 rgba(223, 223, 223, 0.5);
+	border: 1px solid rgba(223, 223, 223, 0.9);
+	border-radius: 0.5rem;
+}
+
+.glass-card {
+	background: rgba(255, 255, 255, 0.4); /* Semi-transparent background */
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border: 1px solid rgba(255, 255, 255, 0.6); /* Subtle border */
+	/* border-radius: 10px; */
+	/* padding: 20px; */
+	/* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); Soft shadow */
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.mtforty {
+	margin-top: 40px;
+}
+
+.fakeLine {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.child {
+	@apply w-full h-[150px] mt-10 py-8 px-6 bg-white bg-opacity-30 rounded-lg shadow-lg backdrop-blur-xl backdrop-filter flex justify-center items-center;
+}
+
+.inputLabel {
+	@apply font-medium text-lg text-neutral-400 block mb-2;
+}
+
+.adminInputField {
+	@apply font-medium text-lg shadow-sm bg-neutral-400 border border-neutral-700 text-neutral-700 placeholder-gray-700 rounded-lg focus:ring-neutral-600 focus:border-neutral-600 block w-full p-2;
+}
+
+.inputField {
+	@apply text-neutral-200 bg-transparent border rounded-lg shadow border-neutral-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 py-2 px-4 block w-full appearance-none leading-normal placeholder-neutral-200 placeholder-opacity-40;
+}
+
+@media screen and (min-width: 200px) and (max-width: 600px) {
+	.container {
+		width: 100%;
+		min-width: auto;
+		background: black;
+	}
+}
