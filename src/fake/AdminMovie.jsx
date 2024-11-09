@@ -82,7 +82,11 @@ const AdminMovie = ({ outsideNew = false }) => {
 	const handelDelete = async (id) => {
 		const confirmBox = window.confirm("確定刪除這部影片?");
 		if (confirmBox === true) {
-			await axios.delete(`/data/movie/${id}`);
+			await axios
+				.delete(`/data/upload/${id}`)
+				.then((res) => {})
+				.catch((err) => console.log(err));
+			window.location.replace("/admin/activities");
 		}
 	};
 
@@ -113,6 +117,21 @@ const AdminMovie = ({ outsideNew = false }) => {
 			await axios
 				.put(`/data/movie/movie/${data.sn}`, formData)
 				.then((res) => alert("影片已上傳。"))
+				.catch((err) => console.log(err));
+		}
+	};
+
+	const handleImageUpload = async (e) => {
+		e.preventDefault();
+
+		if (image) {
+			const formData = new FormData();
+			formData.append("uploadfile", image);
+			console.log("first");
+
+			await axios
+				.put(`/data/movie/thumb/${data.sn}`, formData)
+				.then((res) => alert("圖片已上傳。"))
 				.catch((err) => console.log(err));
 		}
 	};
@@ -274,12 +293,12 @@ const AdminMovie = ({ outsideNew = false }) => {
 									type="file"
 									name="image"
 									className="adminInputField"
-									// onChange={handleImageChange}
+									onChange={handleImageChange}
 								/>
 								{image && (
 									<button
 										class="my-3 w-full bg-[#f3582c] hover:bg-[#bc2312]] text-white font-bold py-2 px-4 rounded-lg text-center"
-										// onClick={handleUpload}
+										onClick={handleImageUpload}
 									>
 										圖片上傳
 									</button>
