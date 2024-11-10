@@ -173,7 +173,7 @@ const AdminMovie = ({ outsideNew = false }) => {
 									onChange={handleInputData}
 								/>
 							</div>
-							<div className="col-span-2">
+							{/* <div className="col-span-2">
 								<label for="movieURL" className="inputLabel">
 									影片位置
 								</label>
@@ -200,7 +200,7 @@ const AdminMovie = ({ outsideNew = false }) => {
 									required
 									onChange={handleInputData}
 								/>
-							</div>
+							</div> */}
 							<div className="col-span-2">
 								<label for="views" className="inputLabel">
 									觀看次數

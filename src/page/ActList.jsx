@@ -11,6 +11,7 @@ const ActList = () => {
 
 	useEffect(() => {
 		getData.execute();
+		document.title = "渡邊傳媒 - 想要色色？可以色色。";
 	}, []);
 
 	return (
