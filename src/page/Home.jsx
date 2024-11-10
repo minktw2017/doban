@@ -21,7 +21,7 @@ const Home = () => {
 	useEffect(() => {
 		if (cookies.doban === "verified") {
 			setOver18(true);
-			document.title = "渡邊傳媒";
+			document.title = "渡邊傳媒 - 想要色色？可以色色。";
 		}
 	}, []);
 
