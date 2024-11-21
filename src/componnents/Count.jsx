@@ -7,7 +7,7 @@ const Count = () => {
 	useEffect(() => {
 		const fetchViews = async () => {
 			await axios
-				.get("/hono/paras")
+				.get("/data/addviews")
 				.then((res) => {
 					setViews(res.data.data.views);
 				})
