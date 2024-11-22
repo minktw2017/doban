@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import ReactPlayer from "react-player";
+import ReactPlayer from "react-player/file";
 import Nav from "./Nav";
 import BackgroundImage from "../../public/bg/bg01.jpg";
 import { useNavigate } from "react-router-dom";
@@ -60,11 +60,12 @@ const Act = () => {
 					<div className="max-w-full lg:mx-auto mx-2 rounded-lg my-4 overflow-x-hidden navbg text-neutral-100 lg:max-w-[1200px] flex flex-col justify-center items-center">
 						<ReactPlayer
 							url={data.filepath}
-							controls
 							width="100%"
 							height="auto"
-							playing={true}
-							playsinline={true}
+							controls
+							loop
+							muted
+							playsinline
 						/>
 						<div className="max-w-full lg:mx-auto mx-2 rounded-lg my-4 pr-4 overflow-x-hidden navbg text-neutral-100 lg:max-w-[1200px] flex justify-end items-center gap-4">
 							<div className="flex justify-center items-center gap-2">
