@@ -157,7 +157,20 @@ const FakeActivities = ({ outsideNew = false }) => {
 									onChange={handleInputData}
 								/>
 							</div>
-
+							<div className="col-span-2">
+								<label for="title" className="inputLabel">
+									影片位置
+								</label>
+								<input
+									type="text"
+									name="filepath"
+									id="filepath"
+									value={data.filepath}
+									className="adminInputField"
+									required
+									onChange={handleInputData}
+								/>
+							</div>
 							<div className="col-span-2">
 								<label for="views" className="inputLabel">
 									觀看次數
@@ -189,7 +202,7 @@ const FakeActivities = ({ outsideNew = false }) => {
 								</button>
 							</div>
 							{/* 影片上傳 */}
-							<div className="col-span-1">
+							{/* <div className="col-span-1">
 								<label for="image" className="inputLabel">
 									影片上傳
 								</label>
@@ -208,7 +221,7 @@ const FakeActivities = ({ outsideNew = false }) => {
 										上傳影片
 									</button>
 								)}
-							</div>
+							</div> */}
 							{/* 圖片上傳 */}
 							<div className="col-span-1">
 								<label for="image" className="inputLabel">
