@@ -127,7 +127,6 @@ const Frames = () => {
 								loading="lazy"
 								frameborder="0"
 								referrerpolicy="strict-origin-when-cross-origin"
-								autoplay
 								clipboard-write
 								encrypted-media
 								gyroscope
@@ -152,7 +151,6 @@ const Frames = () => {
 						loading="lazy"
 						frameborder="0"
 						referrerpolicy="strict-origin-when-cross-origin"
-						autoplay
 						clipboard-write
 						encrypted-media
 						gyroscope
