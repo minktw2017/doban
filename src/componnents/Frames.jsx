@@ -1,55 +1,80 @@
 import { useState, useEffect } from "react";
 import useSceenSize from "../hooks/useScreenSize";
 import { CgChevronLeft, CgChevronRight } from "react-icons/cg";
+import { useGetActs } from "../redux/store";
 
 const Frames = () => {
 	const screenSize = useSceenSize();
 	const [count, setCount] = useState(0);
+	const [clip, setClip] = useState([]);
 	const [content, setContent] = useState([]);
+	const [initClip, setInitClip] = useState(true);
+	const getData = useGetActs();
+
+	useEffect(() => {
+		getData.execute();
+	}, []);
 
 	const frames = [
 		{
-			title: "Lo-fi that makes you feel light as the wind",
-			src: "https://www.youtube.com/embed/aLqpUVqHizk?si=_iW7P4FD7SutSA0T&video-id=youtube_video_id&enablejsapi=1&widgetid=1&color=white&modestbranding=1&rel=0",
-			id: 6,
+			title: "第六次粉絲見面會",
+			filepath:
+				"https://pub-c76ae483163d4b36acbd38cf415dff8d.r2.dev/doban_interactive_6.mp4",
+			_id: 5,
 		},
 		{
-			title: "NOUS UNDERGROUND - 灯火阑珊处 KILLA4NIA ft. REBEL MAN",
-			src: "https://www.youtube.com/embed/FrsMrsWk5rc?si=aHUmYtzacQBycI4T&origin=https://cybermink.com&video-id=youtube_video_id&enablejsapi=1&widgetid=1&color=white&modestbranding=1&rel=0",
-			id: 7,
+			title: "第七次粉絲見面會",
+			filepath:
+				"https://pub-c76ae483163d4b36acbd38cf415dff8d.r2.dev/doban_interactive_7.mp4",
+			_id: 6,
 		},
 		{
-			title: "𝟰𝗮𝗺.",
-			src: "https://geo.dailymotion.com/player.html?video=k3KotMuxrZoQXTBuibW",
-			id: 0,
+			title: "第一次粉絲見面會",
+			filepath:
+				"https://pub-c76ae483163d4b36acbd38cf415dff8d.r2.dev/doban_interactive_1.mp4",
+			_id: 0,
 		},
 		{
-			title:
-				"【人生初體驗解鎖】于心抖M歷史全揭密！叫媽媽的理由原來是！？公開繩縛體驗！",
-			src: "https://www.youtube.com/embed/ZeEg1etm1iE?si=kZhzDpICTh9XFro7&origin=https://cybermink.com&video-id=youtube_video_id&enablejsapi=1&widgetid=1&color=white&modestbranding=1&rel=0",
-			id: 1,
+			title: "第二次粉絲見面會",
+			filepath:
+				"https://pub-c76ae483163d4b36acbd38cf415dff8d.r2.dev/doban_interactive_2.mp4",
+			_id: 1,
 		},
 		{
-			title:
-				"突擊！女優閨房開箱 私房寫真打光拆解|開箱|av|正妹|攝影|mr渡邊【女優採訪＃1】",
-			src: "https://www.youtube.com/embed/xFcKIVtu-aw?si=LGRUW_E2ookIrcu5&origin=https://cybermink.com&video-id=youtube_video_id&enablejsapi=1&widgetid=1&color=white&modestbranding=1&rel=0",
-			id: 2,
+			title: "第三次粉絲見面會",
+			filepath:
+				"https://pub-c76ae483163d4b36acbd38cf415dff8d.r2.dev/doban_interactive_3.mp4",
+			_id: 2,
 		},
 		{
-			title: "2024 旗袍新年cosplay互動會 七位coser性感變裝！ Doban show#5",
-			src: "https://www.youtube.com/embed/Q7WuqS1OJGY?si=0XbEuqJAsgoVB8Yn&origin=https://cybermink.com&video-id=youtube_video_id&enablejsapi=1&widgetid=1&color=white&modestbranding=1&rel=0",
-			id: 3,
+			title: "第八次粉絲見面會",
+			filepath:
+				"https://pub-c76ae483163d4b36acbd38cf415dff8d.r2.dev/doban_interactive_8.mp4",
+			_id: 7,
 		},
 		{
-			title: "『寫真放送』強迫發育過度良好的妹妹拍xx寫真！/妹妹/主題/體育服",
-			src: "https://www.youtube.com/embed/J4lU6g2tXCc?si=H47YEqEzEb7Facpn&origin=https://cybermink.com&video-id=youtube_video_id&enablejsapi=1&widgetid=1&color=white&modestbranding=1&rel=0",
-			id: 4,
+			title: "第四次粉絲見面會",
+			filepath:
+				"https://pub-c76ae483163d4b36acbd38cf415dff8d.r2.dev/doban_interactive_4.mp4",
+			_id: 3,
 		},
 		{
-			title:
-				"【圈內祕辛爆料】互動會COSER採訪！野外x出拍攝募集 最討厭哪位攝師！？|cosplay|爆料|團拍",
-			src: "https://www.youtube.com/embed/Zk6DYJJ6PBc?si=bwkAk9sXCYo9tyb2&origin=https://cybermink.com&video-id=youtube_video_id&enablejsapi=1&widgetid=1&color=white&modestbranding=1&rel=0",
-			id: 5,
+			title: "第五次粉絲見面會",
+			filepath:
+				"https://pub-c76ae483163d4b36acbd38cf415dff8d.r2.dev/doban_interactive_5.mp4",
+			_id: 4,
+		},
+		{
+			title: "第九次粉絲見面會",
+			filepath:
+				"https://pub-c76ae483163d4b36acbd38cf415dff8d.r2.dev/doban_interactive_9.mp4",
+			_id: 4,
+		},
+		{
+			title: "第十次粉絲見面會",
+			filepath:
+				"https://pub-c76ae483163d4b36acbd38cf415dff8d.r2.dev/doban_interactive_10.mp4",
+			_id: 4,
 		},
 	];
 
@@ -94,10 +119,10 @@ const Frames = () => {
 				frames
 					.filter((item, index) => index < 4)
 					.map((frame) => (
-						<div key={frame.id} className="aspect-video">
+						<div key={frame._id} className="aspect-video">
 							<iframe
 								className="w-full h-full rounded-lg overflow-x-hidden lg:rounded-none"
-								src={frame.src}
+								src={frame.filepath}
 								title={frame.title}
 								loading="lazy"
 								frameborder="0"
@@ -118,11 +143,11 @@ const Frames = () => {
 			setContent([
 				<div
 					className="relative max-h-full aspect-video"
-					key={frames[count].id}
+					key={frames[count]._id}
 				>
 					<iframe
 						className="w-full h-full rounded-lg overflow-x-hidden lg:rounded-none "
-						src={frames[count].src}
+						src={frames[count].filepath}
 						title={frames[count].title}
 						loading="lazy"
 						frameborder="0"
@@ -138,7 +163,7 @@ const Frames = () => {
 				</div>,
 			]);
 		}
-	}, [screenSize, count]);
+	}, [screenSize, count, getData]);
 
 	return (
 		<div
@@ -150,7 +175,7 @@ const Frames = () => {
     	  lg:max-w-[1200px]
     	"
 		>
-			<div className="max-w-full mx-2 rounded-lg overflow-x-hidden text-neutral-100 flex justify-center items-center navbg">
+			<div className="max-w-full mx-2 mb-4 rounded-lg overflow-x-hidden text-neutral-100 flex justify-center items-center navbg">
 				<p class="text-[32px] mr-[-2rem] lg:mr-[-3rem] p-2 tracking-[2rem] lg:tracking-[3rem]">
 					最新消息
 				</p>
